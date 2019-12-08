@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Be Inspired</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Inspire</title>
-	<link rel="stylesheet" href="assets/css/style.css">
-</head>
+  <body id="bg-image" class="text-white">
+    <div id="weather">
+      Your Weather Template
+    </div>
+    <div id="quote">
+      The Quote
+    </div>
 
-<body id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
+    <div class="card text-white" id="todo-card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title d-flex justify-content-between">
+          To-Dos <span id="count"></span>
+        </h5>
+        <div class="bg-danger" id="todo-error"></div>
+        <form onsubmit="app.todoController.addTodoAsync(event)">
+          <div class="form-group d-inline-flex mb-3">
+            <label for="description"></label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Description"
+              id="description"
+              required
+            />
+            <div>
+              <button
+                class="btn btn-outline-secondary"
+                type="submit"
+                id="button-addon2"
+              >
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <ul id="todos"></ul>
+      </div>
+    </div>
 
-	<div id="quote">
-		The Quote
-	</div>
-
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script type="module" src="app/main.js"></script>
+  </body>
 </html>
-<html>
+<html></html>
