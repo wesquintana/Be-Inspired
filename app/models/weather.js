@@ -12,6 +12,6 @@ export default class Weather {
     this.weather = data.weather;
   }
   get Template() {
-    return /*html*/ `<h3>${this.city}</h3><img src="http://openweathermap.org/img/wn/${this.weather[0].icon}@2x.png" alt="" srcset=""/><span class="text-secondary">${this.fahren}° F</span>`;
+    return /*html*/ `<h3>${this.city}</h3><img src="https://openweathermap.org/img/wn/${this.weather[0].icon}@2x.png" alt="" srcset=""/><span class="text-secondary">${this.fahren}° F</span>`;
   }
 }
