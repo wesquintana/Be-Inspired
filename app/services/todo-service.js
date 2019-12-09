@@ -25,14 +25,14 @@ class TodoService {
 
   async toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo._id == todoId);
-    let index = store.State.todos.findIndex(todo => todo._id == todoId);
-    let tempTodo = new Todo(todo);
-    tempTodo.completed = !tempTodo.completed;
-    let res = await todoApi.put(todoId, tempTodo);
-    let tempTodos = [...store.State.todos];
-    tempTodos[index] = tempTodo;
-    store.commit("todos", tempTodos);
-    store.commit;
+    // let index = store.State.todos.findIndex(todo => todo._id == todoId);
+    // let tempTodo = new Todo(todo);
+    todo.completed = !todo.completed;
+    store.commit("todos", [...store.State.todos]);
+    let res = await todoApi.put(todoId, todo);
+    // let tempTodos = [...store.State.todos];
+    // tempTodos[index] = tempTodo;
+
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
